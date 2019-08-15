@@ -24,11 +24,11 @@ class SiteController extends Controller
             // do something meaningful here about $model
 
             return $this->render('entry-confirm', ['model' => $model]);
-        }else{
-            //either the page is initially displayed or there is some validation error
-
-            return $this->render('entry', ['model' => $model]);
         }
+
+        //either the page is initially displayed or there is some validation error
+
+        return $this->render('entry', ['model' => $model]);
     }
 
     public function actionSay($message = 'Hello')
